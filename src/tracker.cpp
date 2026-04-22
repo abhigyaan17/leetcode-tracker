@@ -5,16 +5,17 @@
 #include "../include/nlohmann/json.hpp"
 using namespace std;
 
+struct problemData{
+    string id,name,type,difficulty,status;
+};
+
 class trackerModule{
 public:
-    unordered_map<string,int> trackerMap;
-    unordered_map<string,int> arrayMap;
-    unordered_map<string,int> stringMap;
-    unordered_map<string,int> stackMap;
-    unordered_map<string,int> queueMap;
-    unordered_map<string,int> recursionMap;
-
     nlohmann::json json_data;
+    unordered_map<string,problemData> arrayMap;
+
+    
+
     void jsonReader(){
         fstream jsonFile("../data/problems.json");
         if(!jsonFile.is_open()){
@@ -25,28 +26,19 @@ public:
             cerr<<"Error:Expected a array of objects from JSON file"<<endl;
         }
     }
+    
     void problemMapper(){
         for(const auto& problem:json_data){
-            if(problem["type"]=="array"){
-                arrayMap[problem["name"]]++;
-                trackerMap["array"]++;
-            }
-            else if(problem["type"]=="string"){
-                stringMap[problem["name"]]++;
-                trackerMap["string"]++;
-            }
-            else if(problem["type"]=="stack"){
-                stackMap[problem["name"]]++;
-                trackerMap["string"]++;
-            }
-            else if(problem["type"]=="queue"){
-                queueMap[problem["name"]]++;
-                trackerMap["string"]++;
-            }
-            else if(problem["type"]=="recursion"){
-                recursionMap[problem["name"]]++;
-                trackerMap["recursion"]++;
-            }
+            problemData data_obj;
+            data_obj.id=problem.at("id");  
+            data_obj.name=problem.at("name");  
+            data_obj.type=problem.at("type");  
+            data_obj.difficulty=problem.at("difficulty");
+            data_obj.status=problem.at("status");
+            arrayMap[data_obj.id]=data_obj;
+        }
+        for(auto it:arrayMap){
+            cout<<it.first<<" : "<<it.second.name<<endl;
         }
     }
 };
