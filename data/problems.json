@@ -1,0 +1,100 @@
+[
+    {
+        "id": "ARR-E-001",
+        "name": "Reverse Array",
+        "type": "array",
+        "difficulty": "easy",
+        "status": "unsolved"
+    },
+    {
+        "id": "ARR-E-002",
+        "name": "Find Maximum Element",
+        "type": "array",
+        "difficulty": "easy",
+        "status": "solved"
+    },
+    {
+        "id": "ARR-M-001",
+        "name": "Two Sum",
+        "type": "array",
+        "difficulty": "medium",
+        "status": "unsolved"
+    },
+    {
+        "id": "STK-E-001",
+        "name": "Valid Parentheses",
+        "type": "stack",
+        "difficulty": "easy",
+        "status": "solved"
+    },
+    {
+        "id": "STK-M-001",
+        "name": "Min Stack",
+        "type": "stack",
+        "difficulty": "medium",
+        "status": "unsolved"
+    },
+    {
+        "id": "QUE-M-001",
+        "name": "Implement Queue using Stacks",
+        "type": "queue",
+        "difficulty": "medium",
+        "status": "unsolved"
+    },
+    {
+        "id": "QUE-M-002",
+        "name": "Circular Queue",
+        "type": "queue",
+        "difficulty": "medium",
+        "status": "solved"
+    },
+    {
+        "id": "REC-E-001",
+        "name": "Factorial using Recursion",
+        "type": "recursion",
+        "difficulty": "easy",
+        "status": "solved"
+    },
+    {
+        "id": "REC-E-002",
+        "name": "Fibonacci Number",
+        "type": "recursion",
+        "difficulty": "easy",
+        "status": "unsolved"
+    },
+    {
+        "id": "REC-M-001",
+        "name": "Subsets (Power Set)",
+        "type": "recursion",
+        "difficulty": "medium",
+        "status": "unsolved"
+    },
+    {
+        "id": "STR-E-001",
+        "name": "Reverse String",
+        "type": "string",
+        "difficulty": "easy",
+        "status": "solved"
+    },
+    {
+        "id": "STR-M-001",
+        "name": "Longest Substring Without Repeating Characters",
+        "type": "string",
+        "difficulty": "medium",
+        "status": "unsolved"
+    },
+    {
+        "id": "STR-E-002",
+        "name": "Valid Anagram",
+        "type": "string",
+        "difficulty": "easy",
+        "status": "solved"
+    },
+    {
+        "id": "STR-E-003",
+        "name": "Palindrome Check",
+        "type": "string",
+        "difficulty": "easy",
+        "status": "unsolved"
+    }
+]

@@ -12,10 +12,8 @@ struct problemData{
 class trackerModule{
 public:
     nlohmann::json json_data;
-    unordered_map<string,problemData> arrayMap;
-
+    unordered_map<string,problemData> main_problemMap;
     
-
     void jsonReader(){
         fstream jsonFile("../data/problems.json");
         if(!jsonFile.is_open()){
@@ -35,10 +33,7 @@ public:
             data_obj.type=problem.at("type");  
             data_obj.difficulty=problem.at("difficulty");
             data_obj.status=problem.at("status");
-            arrayMap[data_obj.id]=data_obj;
-        }
-        for(auto it:arrayMap){
-            cout<<it.first<<" : "<<it.second.name<<endl;
+            main_problemMap[data_obj.id]=data_obj;
         }
     }
 };
